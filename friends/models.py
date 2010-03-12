@@ -191,17 +191,12 @@ class FriendshipInvitation(models.Model):
             self.status = "5"
             self.save()
 
-            print "accepted"
-
             if notification:
-                print "notify me"
                 notification.send([self.from_user], "friends_accept", {"invitation": self})
                 notification.send([self.to_user], "friends_accept_sent", {"invitation": self})
 #                for user in friend_set_for(self.to_user) | friend_set_for(self.from_user):
 #                    if user != self.to_user and user != self.from_user:
                 # public notifications for the two users involved
-
-                print "moo"
 
                 notification.send([self.from_user], "friends_otherconnect", {"from_user": self.from_user, "to_user": self.to_user})
                 notification.send([self.to_user], "friends_otherconnect", {"from_user": self.to_user, "to_user": self.from_user})
