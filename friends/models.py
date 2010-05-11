@@ -160,8 +160,8 @@ class JoinInvitation(models.Model):
         if notification:
             notification.send([self.from_user], "join_accept", {"invitation": self, "new_user": new_user})
 
-            notification.send([self.from_user], "friends_otherconnect", {"invitation": self, "to_user": self.to_user})
-            notification.send([self.to_user], "friends_otherconnect", {"invitation": self, "to_user": self.from_user})
+            notification.send([self.from_user], "friends_otherconnect", {"invitation": self, "to_user": new_user, "from_user": new_user})
+            notification.send([new_user], "friends_otherconnect", {"invitation": self, "to_user": self.from_user})
 
 
 class FriendshipInvitationManager(models.Manager):
