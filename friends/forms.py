@@ -30,7 +30,7 @@ if EmailAddress:
         message = forms.CharField(label="Message", required=False, widget=forms.Textarea(attrs = {'cols': '30', 'rows': '5'}))
 
         def __init__(self, *args, **kwargs):
-            self.request = kwargs.pop('reqeust')
+            self.request = kwargs.pop('request')
             super(JoinRequestForm, self).__init__(*args, **kwargs)
 
         def clean_email(self):
