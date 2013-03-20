@@ -1,4 +1,11 @@
-0.1.5
+1.0.6
+-----
+
+ * removed FriendshipInvitationHistory model and its dependency code as it was
+   causing issues when an user instance was tried to delete
+
+
+1.0.5
 -----
 
  * fixed dependancy on django-email-confirmation which crept in by accident

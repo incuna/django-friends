@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-friends',
-    version='1.0.2',
+    version='1.0.6',
     description='friendship, contact and invitation management for the Django web framework',
-    author='James Tauber',
-    author_email='jtauber@jtauber.com',
-    url='http://github.com/jtauber/django-friends/',
+    author='James Tauber / Incuna Ltd',
+    author_email='admin@incuna.com',
+    url='http://github.com/incuna/django-friends/',
     packages=find_packages(exclude=['friendsdev']),
     classifiers=[
         'Development Status :: 3 - Alpha',
