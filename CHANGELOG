@@ -1,3 +1,7 @@
+1.0.7
+
+* Replace django.utils.simplejson with stdlib json
+
 1.0.6
 -----
 
